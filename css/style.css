@@ -1,0 +1,657 @@
+/*!RESET*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*!HEADER*/
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    height: 150px;
+}
+
+header a img {
+    height: 150px;
+    width: 200px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.navegacion{
+    display: flex;
+}
+
+.navegacion label, .navegacion input{
+    display: none;
+}
+
+.navegacion ul {
+    list-style: none;
+    text-align: center;
+    display: grid;
+    grid-auto-flow: column;
+    margin-top: 20px;
+}
+.navegacion ul li {
+    margin: 20px;
+}
+.navegacion ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.navegacion ul li a::after{
+    content: "";
+    display: block;
+    background: #000000;
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
+}
+
+.navegacion ul li a:hover{
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/*!MAIN*/
+.hero {
+    background-image: url(../img/granos-cafe.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height:500px ;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: end;
+}
+
+.hero div{
+    color: rgb(255, 255, 255);
+    width: 60%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.hero div h1{
+    text-align: right;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.hero div p{
+    text-align: right;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu div{
+    width: 50%;
+    padding: 20px;
+    text-align: right;
+    font-size: 20px;
+    text-align: center;
+}
+
+.menu div h2{
+    padding: 10px;
+}
+
+.menu div p{
+    margin-bottom: 20px;
+}
+
+.menu div a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.menu img{
+    height: 400px;
+    width: 500px;
+    padding: 25px;
+}
+
+.cafe{
+    border-top: 1px solid #999;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cafe div{
+    width: 50%;
+    padding: 20px;
+    text-align: right;
+    font-size: 20px;
+    text-align: center;
+}
+
+.cafe div h2{
+    padding: 10px;
+}
+
+.cafe div p{
+    margin-bottom: 20px;
+}
+
+.cafe div a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.cafe img{
+    height: 500px;
+    width: 500px;
+    padding: 25px;
+}
+
+.eventos h2{
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    text-align: center;
+    padding: 10px;
+}
+
+.eventos p{
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.tarjetas-eventos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tarjetas-eventos div{
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 30px;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    transition: all 400ms ease;
+}
+
+.tarjetas-eventos div:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
+    transform: translateY(-3%);
+}
+
+.tarjetas-eventos div img{
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+}
+
+.tarjetas-eventos div h3{
+    font-size: 18px;
+    color: black;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.tarjetas-eventos div a{
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+}
+
+/*!FOOTER*/
+
+footer{
+    background-image: url(../img/ilustracion-cafe.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-ayuda {
+    margin: 10px;
+}
+
+.menu-ayuda h3{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-ayuda ul{
+    font-weight: bold;
+    list-style: none;
+    padding: 10px;
+}
+
+/*.menu-ayuda a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}*/
+
+.redes-sociales img{
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+/*!PAGES MENU*/
+
+.carta{
+    background-image: url(../img/ilustracion-cafe.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height:300px ;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carta h2{
+    text-align: center;
+    font-size: 50px;
+}
+
+.carta p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.subtitulo{
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container{
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr) ;
+   grid-auto-rows: 150px;
+   gap: 60px;
+}
+
+.container div{
+    position: relative;
+}
+
+.container div h3{
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.644);
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+.container div img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/*!PAGE NOSOTROS*/
+
+.nosotros{
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nosotros div{
+    width: 50%;
+    padding: 20px;
+    text-align: right;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nosotros div h2{
+    padding: 10px;
+}
+
+.nosotros div p{
+    margin-bottom: 20px;
+}
+
+.nosotros img{
+    height: 500px;
+    width: 600px;
+    padding: 25px;
+}
+
+.nuestra-historia{
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nuestra-historia div{
+    width: 50%;
+    padding: 20px;
+    text-align: right;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nuestra-historia div h2{
+    padding: 10px;
+}
+
+.nuestra-historia div p{
+    margin-bottom: 20px;
+}
+
+.nuestra-historia img{
+    height: 500px;
+    width: 600px;
+    padding: 25px;
+}
+
+/*!PAGES NUESTRO CAFE*/
+
+.hero-cafe{
+    background-image: url(../img/ilustracion-cafe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-cafe div h2{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.hero-cafe div p{
+    font-size: 25px;
+    text-align: center;
+}
+
+.container-cafe{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 60px;
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+}
+
+.container-cafe div{
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+}
+
+.container-cafe div h3{
+    font-size: 18px;
+    color: black;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.container-cafe img{
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+}
+
+/*!PAGES EVENTOS*/
+
+.hero-eventos {
+    background-image: url(../img/ilustracion-cafe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-eventos div{
+    width: 500px;
+    height: auto;
+}
+
+.hero-eventos div h2{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hero-eventos div p{
+    font-size: 25px;
+    text-align: center;
+}
+.hero-eventos div form {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+  }
+
+.hero-eventos div form h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+.hero-eventos div form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+    text-align: left;
+  }
+
+.hero-eventos div form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+.hero-eventos div form button {
+    background-color: #0a0a0a;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+.hero-eventos div form button:hover {
+    background-color: #000000;
+  }
+  
+/*!MEDIAQUERY*/
+
+@media screen and (max-width:1160px){
+    .tarjetas-eventos{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .hero div{
+        width: 100%;
+    }
+    .hero div h2{
+        text-align: center;
+        font-size: 35px;
+    }
+    .hero div p{
+        text-align: center;
+        font-size: 25px;
+    }
+    .carta h2{
+        font-size: 40px;
+    }
+    .carta p{
+        font-size: 15px;
+    }
+    .container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width:880px){
+    .navegacion label{
+        display: block;
+        cursor: pointer;
+    }
+    .navegacion label img{
+        margin-right: 25px;
+    }
+    .navegacion ul{
+        position: fixed;
+        top: 150px;
+        bottom: 0;
+        background-color: black;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        clip-path: circle(0 at center);
+        transition: clip-path 0.8s ease-in-out;
+        z-index: 1;
+    }
+    .navegacion input:checked + ul{
+        clip-path: circle(100% at center);
+    }  
+    .navegacion ul li a{
+        color: #fff;
+    }
+     header {
+        background-color: rgba(255, 255, 255, 0.8);
+        position: static;
+    }
+    .tarjetas-eventos{
+        grid-template-columns: repeat(2,1fr);
+        margin: 30px;
+    }
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:595px){
+    .navegacion ul {
+        display: block;
+        font-size: 15px;
+    }
+    .tarjetas-eventos{
+        grid-template-columns: repeat(1,1fr);
+        margin: 130px;
+    }
+    .hero div h2{
+        font-size: 25px;
+    }
+    .hero div p{
+        font-size: 15px;
+    }
+    .menu img{
+        height: 300px;
+        width: 400px;
+    }
+    .menu div p{
+        font-size: 15px;
+    }
+    .cafe img{
+        height: 400px;
+        width: 400px;
+    }
+    .cafe div p{
+        font-size: 15px;
+    }
+    .eventos p{
+        font-size: 15px;
+    }
+    .tarjetas-eventos{
+        margin: 70px;
+    }
+    .carta h2{
+        font-size: 25px;
+    }
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .hero-cafe div h2{
+        font-size: 30px;
+
+    }
+    
+    .hero-cafe div p{
+        font-size: 20px;
+    }
+}
+

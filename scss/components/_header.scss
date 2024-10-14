@@ -1,0 +1,55 @@
+header{
+    background-color: $color-primario;
+    position: sticky;
+    top: 0;
+    @include flex(flex, space-between, center, none);
+    z-index: 1;
+    height: 150px;
+    a{
+        img{
+            height: 150px;
+            width: 200px;
+            padding: 5px;
+            margin: 10px;
+        }
+    }
+    .navegacion{
+        display: flex;
+        label{
+            display: none;
+        }
+        input{
+            display: none;
+        }
+        ul{
+            list-style: none;
+            text-align: center;
+            display: grid;
+            grid-auto-flow: column;
+            margin-top: 20px;
+            li{
+                margin: 20px;
+                a{
+                    color: rgb(0, 0, 0);
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 18px;
+                    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+                    &::after{
+                        content: "";
+                        display: block;
+                        background: $color-secundario;
+                        width: 90%;
+                        margin-top: 3px;
+                        height: 3px;
+                        clip-path: var(--clippy);
+                        transition: clip-path .5s;
+                    }
+                    &:hover{
+                        --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);  
+                    }
+                }
+            }
+        }
+    }
+}
