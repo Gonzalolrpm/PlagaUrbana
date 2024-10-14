@@ -1,7 +1,7 @@
 <h1 align="center">Hola 👋, Soy Gonzalo</h1>
-<h3 align="center">Soy una persona a la que le gusta ser organizada, amante de los retos y el aprendizaje constante</h3>
+<h3 align="center"></h3>
 
-- 🔭 Actualmente me encuentro trabajando la pagina web [Samy's](gonzalolrpm.github.io/Samy-s/)
+<!-- - 🔭 Actualmente me encuentro trabajando la pagina web [Samy's](gonzalolrpm.github.io/Samy-s/)-->
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">

@@ -1,16 +1,62 @@
+.top_bar{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(163, 54, 240);
+    position: fixed !important;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    .contact-info{
+        color: white;
+        display: flex;
+        align-items: center;
+        div{
+            margin: 0 15px;
+            display: flex;
+            align-items: center;
+            .top_bar .contact-info div i{
+                margin-right: 8px;
+            }
+        }
+    }
+    .social-icons{
+        display: flex;
+        align-items: center;
+        a{
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            display: flex;
+            align-items: center;
+            i{
+                margin-right: 8px;
+            }
+        }
+    }
+}
 header{
     background-color: $color-primario;
-    position: sticky;
-    top: 0;
+    position: fixed !important;
+    top: 30px;
+    left: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     @include flex(flex, space-between, center, none);
-    z-index: 1;
-    height: 150px;
+    z-index: 9999;
+    width: 100%;
+    height: 100px;
     a{
         img{
-            height: 150px;
-            width: 200px;
+            height: 100px;
+            width: 300px;
             padding: 5px;
-            margin: 10px;
+            margin: 100px;
         }
     }
     .navegacion{
@@ -26,14 +72,13 @@ header{
             text-align: center;
             display: grid;
             grid-auto-flow: column;
-            margin-top: 20px;
+            margin: 80px;
             li{
-                margin: 20px;
+                margin: 5px;
                 a{
-                    color: rgb(0, 0, 0);
+                    color: rgb(255, 255, 255);
                     text-decoration: none;
-                    font-weight: bold;
-                    font-size: 18px;
+                    font-size: 16px;
                     --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
                     &::after{
                         content: "";

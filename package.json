@@ -1,26 +1,17 @@
 {
-  "name": "project",
+  "name": "plagaurbana",
   "version": "1.0.0",
-  "description": "<h1 align=\"center\">Hola 👋, Soy Gonzalo</h1>\r <h3 align=\"center\">Soy una persona a la que le gusta ser organizada, amante de los retos y el aprendizaje constante</h3>",
+  "description": "<h1 align=\"center\">Hola 👋, Soy Gonzalo</h1>\r <h3 align=\"center\"></h3>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/estilos.scss css/estilos.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
-
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Gonzalolrpm/Samy-s"
+    "build-css": "node-sass --include-path scss scss/estilos.scss css/estilos.css", 
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"" 
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Gonzalolrpm/Samy-s/issues"
-  },
-  "homepage": "https://github.com/Gonzalolrpm/Samy-s#readme",
   "devDependencies": {
     "node-sass": "^9.0.0",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.1.7"
   }
 }
