@@ -1,7 +1,7 @@
-<h1 align="center">Hola 👋, Soy Gonzalo</h1>
+<h1 align="center">Hola 👋</h1>
 <h3 align="center"></h3>
 
-<!-- - 🔭 Actualmente me encuentro trabajando la pagina web [Samy's](gonzalolrpm.github.io/Samy-s/)-->
+<!-- - 🔭-->
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
