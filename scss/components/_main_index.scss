@@ -3,14 +3,7 @@ main{
     .hero{
         min-height: 100vh;
         position: relative;
-        /*background-image: url(../img/granos-cafe.jpeg);
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        height:500px ;
-        padding: 50px;
-        @include flex(flex, space-around, end, column);*/
+        padding-top: 130px;
         video{
             position: absolute;
             top: 0;
@@ -18,33 +11,30 @@ main{
             width: 100%;
             height: 100%;
             object-fit: cover;
+            z-index: 1;
         }
         .capa{
             position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
+            height: 100%    ;
             background: rgba(0, 0, 0, 0.4);
             mix-blend-mode: overlay;
+            z-index: 2;
         }
         div{
-            /*color: rgb(255, 255, 255);
-            width: 60%;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.4);
-            text-align: center;
-            border-radius: 5px;
-            overflow: hidden;*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centra el contenido */
+            text-align: center; /* Centra el texto horizontalmente */
+            color: white; /* Color del texto */
+            z-index: 3;
             h1{
-                text-align: right;
                 font-size: 50px;
-                font-style: italic;
+                margin-bottom: 20px;
             }
             p{
-                text-align: right;
                 font-size: 20px;
-                font-style: italic;
             }
         }
     }
@@ -109,10 +99,10 @@ main{
     .eventos{
         h2{
             color: rgb(0, 0, 0);
-            border-bottom: 1px solid #999;
-            border-top: 1px solid #999;
             text-align: center;
             padding: 10px;
+            border-bottom: 1px solid rgb(0, 0, 0);
+            border-top: 1px solid rgb(0, 0, 0);
         }
         p{
             text-align: center;
@@ -126,36 +116,36 @@ main{
         div{
             display: inline-block;
             text-align: center;
-            width: 250px;
-            height: 400px;
+            width: 200px;
+            /*height: 400px;*/
             margin: 20px;
-            border-radius: 30px;
+            border-radius: 10px;
             background: #fff;
-            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0);
             transition: all 400ms ease;
             &:hover{
-                box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
+                box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
                 transform: translateY(-3%);
             }
             img{
-                width: 250px;
+                width: 100%;
                 height: 250px;
-                border-radius: 30px;
             }
             h3{
-                font-size: 18px;
+                font-size: 15px;
                 color: black;
-                margin-bottom: 15px;
-                padding: 15px;
-            }
-            button{
-                a{
-                    text-decoration: none;
-                    padding: 5px;
-                    color: rgb(255, 255, 255);
-                }
+                padding: 30px;
             }
         }
+    }
+    .productos-servicio{
+        border: 3px solid rgb(163, 54, 240);
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        background-color: white;
+        width: 80%;
+        margin: 40px auto;
     }
 //*MAIN MENU
 main{

@@ -27,7 +27,7 @@
       margin: 0 15px;
       display: flex;
       align-items: center; }
-      .top_bar .contact-info div .top_bar .contact-info div i {
+      .top_bar .contact-info div i {
         margin-right: 8px; }
   .top_bar .social-icons {
     display: flex;
@@ -57,9 +57,9 @@ header {
   height: 100px; }
   header a img {
     height: 100px;
-    width: 300px;
+    width: 500px;
     padding: 5px;
-    margin: 100px; }
+    margin: 30px; }
   header .navegacion {
     display: flex; }
     header .navegacion label {
@@ -94,45 +94,38 @@ header {
 main .hero {
   min-height: 100vh;
   position: relative;
-  /*background-image: url(../img/granos-cafe.jpeg);
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        height:500px ;
-        padding: 50px;
-        @include flex(flex, space-around, end, column);*/ }
+  padding-top: 130px; }
   main .hero video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    z-index: 1; }
   main .hero .capa {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
-    mix-blend-mode: overlay; }
+    mix-blend-mode: overlay;
+    z-index: 2; }
   main .hero div {
-    /*color: rgb(255, 255, 255);
-            width: 60%;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.4);
-            text-align: center;
-            border-radius: 5px;
-            overflow: hidden;*/ }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centra el contenido */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    color: white;
+    /* Color del texto */
+    z-index: 3; }
     main .hero div h1 {
-      text-align: right;
       font-size: 50px;
-      font-style: italic; }
+      margin-bottom: 20px; }
     main .hero div p {
-      text-align: right;
-      font-size: 20px;
-      font-style: italic; }
+      font-size: 20px; }
 
 .menu {
   display: flex;
@@ -185,10 +178,10 @@ main .hero {
 
 .eventos h2 {
   color: black;
-  border-bottom: 1px solid #999;
-  border-top: 1px solid #999;
   text-align: center;
-  padding: 10px; }
+  padding: 10px;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black; }
 
 .eventos p {
   text-align: center;
@@ -204,29 +197,32 @@ main .hero {
   .tarjetas-eventos div {
     display: inline-block;
     text-align: center;
-    width: 250px;
-    height: 400px;
+    width: 200px;
+    /*height: 400px;*/
     margin: 20px;
-    border-radius: 30px;
+    border-radius: 10px;
     background: #fff;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0);
     transition: all 400ms ease; }
     .tarjetas-eventos div:hover {
-      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
       transform: translateY(-3%); }
     .tarjetas-eventos div img {
-      width: 250px;
-      height: 250px;
-      border-radius: 30px; }
+      width: 100%;
+      height: 250px; }
     .tarjetas-eventos div h3 {
-      font-size: 18px;
+      font-size: 15px;
       color: black;
-      margin-bottom: 15px;
-      padding: 15px; }
-    .tarjetas-eventos div button a {
-      text-decoration: none;
-      padding: 5px;
-      color: white; }
+      padding: 30px; }
+
+.productos-servicio {
+  border: 3px solid #a336f0;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  width: 80%;
+  margin: 40px auto; }
 
 main .carta {
   background-image: url(../img/ilustracion-cafe.jpg);
@@ -428,23 +424,14 @@ main .hero-eventos {
         background-color: white; }
 
 footer {
-  background: linear-gradient(rgba(255, 255, 255, 0.932), rgba(255, 255, 255, 0.201)), url(../img/ilustracion-cafe.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  background: linear-gradient(rgba(255, 255, 255, 0.932), rgba(255, 255, 255, 0.201));
+  display: flex; }
   footer .menu-ayuda {
     margin: 10px; }
     footer .menu-ayuda h3 {
-      text-align: center;
-      font-size: 20px;
+      font-size: 15px;
       font-weight: bold; }
     footer .menu-ayuda ul {
-      font-weight: bold;
       list-style: none;
       padding: 10px; }
       footer .menu-ayuda ul .redes-sociales a img {
