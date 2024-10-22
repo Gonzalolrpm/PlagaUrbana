@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!RESET*/
 * {
   margin: 0;
@@ -111,22 +112,96 @@ main .hero {
     background: rgba(0, 0, 0, 0.4);
     mix-blend-mode: overlay;
     z-index: 2; }
-  main .hero div {
+  main .hero .texto_principal {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 25%;
+    left: 40%;
+    transform: translate(-50%);
     /* Centra el contenido */
-    text-align: center;
+    text-align: left;
     /* Centra el texto horizontalmente */
     color: white;
     /* Color del texto */
     z-index: 3; }
-    main .hero div h1 {
+    main .hero .texto_principal h1 {
+      font-size: 60px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      animation: fadeSlideUp 1.5s ease-in-out forwards 0.5s; }
+    main .hero .texto_principal p {
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+      animation: fadeSlideUp 1.5s ease-in-out forwards 0.5s; }
+  main .hero .contenido {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: white;
+    z-index: 3; }
+    main .hero .contenido h1 {
       font-size: 50px;
       margin-bottom: 20px; }
-    main .hero div p {
+    main .hero .contenido p {
       font-size: 20px; }
+  main .hero .contacto {
+    position: absolute;
+    color: white;
+    top: 60%;
+    right: 5%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    width: 300px; }
+    main .hero .contacto h2 {
+      text-align: center;
+      margin-bottom: 15px; }
+    main .hero .contacto form {
+      display: flex;
+      flex-direction: column; }
+      main .hero .contacto form label {
+        margin-bottom: 5px;
+        font-weight: bold; }
+      main .hero .contacto form input, main .hero .contacto form textarea {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px; }
+      main .hero .contacto form button {
+        padding: 10px;
+        background-color: #a336f0;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease; }
+        main .hero .contacto form button:hover {
+          background-color: #7c1ac2; }
+  main .hero #formMensaje {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+    display: none; }
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+    /* Comienza desplazado hacia abajo */ }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    /* Termina en su posición normal */ } }
 
 .menu {
   display: flex;
@@ -206,8 +281,8 @@ main .hero {
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0);
     transition: all 400ms ease; }
     .tarjetas-eventos div:hover {
-      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-      transform: translateY(-3%); }
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(-5%); }
     .tarjetas-eventos div img {
       width: 100%;
       height: 250px; }

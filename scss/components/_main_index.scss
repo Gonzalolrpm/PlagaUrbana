@@ -21,22 +21,117 @@ main{
             mix-blend-mode: overlay;
             z-index: 2;
         }
-        div{
+        .texto_principal{
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* Centra el contenido */
-            text-align: center; /* Centra el texto horizontalmente */
+            top: 25%;
+            left: 40%;
+            transform: translate(-50%); /* Centra el contenido */
+            text-align: left; /* Centra el texto horizontalmente */
             color: white; /* Color del texto */
             z-index: 3;
             h1{
+                font-size: 60px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+                animation: fadeSlideUp 1.5s ease-in-out forwards 0.5s;
+            }
+            p{
+                font-size: 25px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+                animation: fadeSlideUp 1.5s ease-in-out forwards 0.5s;
+            }
+        }
+        .contenido {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            text-align: left;
+            color: white;
+            z-index: 3;
+
+            h1 {
                 font-size: 50px;
                 margin-bottom: 20px;
             }
-            p{
+
+            p {
                 font-size: 20px;
             }
         }
+        .contacto {
+            position: absolute;
+            color: white;
+            top: 60%;
+            right: 5%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 3;
+            width: 300px;
+
+            h2 {
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                }
+
+                input, textarea {
+                    padding: 10px;
+                    margin-bottom: 15px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 14px;
+                }
+
+                button {
+                    padding: 10px;
+                    background-color: rgb(163, 54, 240);
+                    color: rgb(255, 255, 255,);
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: rgb(124, 26, 194);
+                    }
+                }
+            }
+        }
+
+        #formMensaje {
+            margin-top: 10px;
+            font-size: 14px;
+            color: green;
+            display: none;
+        }    
+        
+    }
+}
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px); /* Comienza desplazado hacia abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Termina en su posición normal */
     }
 }
     .menu{
@@ -124,8 +219,8 @@ main{
             box-shadow: 0px 1px 10px rgba(0, 0, 0, 0);
             transition: all 400ms ease;
             &:hover{
-                box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-                transform: translateY(-3%);
+                box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+                transform: translateY(-5%);
             }
             img{
                 width: 100%;
