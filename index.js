@@ -19,3 +19,30 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     // Reiniciar el formulario
     document.getElementById('contactForm').reset();
 });
+
+// Función para mostrar/ocultar el modal
+function toggleQRModal() {
+    const modal = document.querySelector('.qr-modal'); // Selecciona el modal
+    if (modal.style.display === 'none' || modal.style.display === '') {
+        modal.style.display = 'flex'; // Muestra el modal
+        console.log('Modal mostrado'); // Para depuración
+    } else {
+        modal.style.display = 'none'; // Oculta el modal
+        console.log('Modal oculto'); // Para depuración
+    }
+}
+
+// Asegúrate de que el modal esté oculto al cargar la página
+window.onload = () => {
+    document.querySelector('.qr-modal').style.display = 'none'; // Asegúrate de usar querySelector
+};
+
+// Asegúrate de que el modal esté oculto al cargar la página
+window.onload = () => {
+    const modal = document.querySelector('.qr-modal');
+    if (modal) {
+        modal.style.display = 'none'; // Asegúrate de usar querySelector
+    } else {
+        console.error('El modal no se encontró al cargar la página.');
+    }
+};

@@ -16,7 +16,7 @@ main{
         .capa{
             position: absolute;
             width: 100%;
-            height: 100%    ;
+            height: 100%;
             background: rgba(0, 0, 0, 0.4);
             mix-blend-mode: overlay;
             z-index: 2;
@@ -118,7 +118,7 @@ main{
         #formMensaje {
             margin-top: 10px;
             font-size: 14px;
-            color: green;
+            color: rgb(255, 255, 255);
             display: none;
         } 
         .wave{
@@ -140,52 +140,18 @@ main{
         transform: translateY(0); /* Termina en su posición normal */
     }
 }
-    .benefits-section{
-        @include flex(flex, space-around, center, none);
-        flex-wrap: wrap;
-        img{
-            height: 500px;
-            width: 500px;
-            padding: 25px;
-        }
-        div{
-            width: 50%;
-            padding: 20px;
-            text-align: right;
-            font-size: 20px;
-            text-align: left;
-            ul {
-                list-style-type: disc;
-                padding-left: 20px;
-                
-                li {
-                    font-size: 1.2rem;
-                    margin-bottom: 10px;
-                    color: #333;
-    
-                    strong {
-                        color: #000;
-                        font-weight: bold;
-                    }
-                }
-            }    
-            button{
-                a{
-                    align-items: center;
-                    text-decoration: none;
-                    color: rgb(255, 255, 255);
-                }
-            }
-        }
-    }
     .eventos{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding-left: 10%;
         h2{
             color: rgb(24, 0, 24);
             text-align: center;
-            padding: 10px;
             font-weight: bold;
             font-size: 40px;
-            border-bottom: 1px solid rgb(24, 0, 24);
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgb(163, 24, 240);
             /*border-top: 1px solid rgb(0, 0, 0);*/
         }
         p{
@@ -233,41 +199,167 @@ main{
         width: 80%;
         margin: 40px auto;
     }
+    .benefits-section{
+        @include flex(flex, space-around, center, none);
+        flex-wrap: wrap;
+        img{
+            height: 500px;
+            width: 500px;
+            padding: 25px;
+            border-radius: 30%;
+            box-shadow: rgba(0, 0, 0, .5);
+        }
+        div{
+            width: 50%;
+            padding: 20px;
+            text-align: right;
+            font-size: 20px;
+            text-align: left;
+            h2{
+                margin-bottom: 20px;
+                text-align: left;
+            }
+            ul {
+                list-style-type: none;
+                padding-left: 20px;
+                li {
+                    font-size: 1.2rem;
+                    margin-bottom: 20px;
+                    color: #333;
+                    span{
+                        background: rgb(135, 0, 238);
+                        color: #fff;
+                        border-radius: 50%;
+                        display: inline-block;
+                        text-align: center;
+                        width: 30px;
+                        height: 30px;
+                        padding: 2px;
+                        margin-right: 5px;
+                        box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+                    }
+    
+                    strong {
+                        color: #000;
+                        font-weight: bold;
+                    }
+                }
+            }    
+            button{
+                margin-left: 250px;
+                margin-bottom: 50px;
+                a{
+                    align-items: center;
+                    text-align: center;
+                    text-decoration: none;
+                    color: rgb(255, 255, 255);
+                }
+            }
+        }
+    }
     .public-places{
-        border-top: 1px solid #999;
+        border-top:1px solid rgb(163, 54, 240);
+        border-bottom: 1px solid rgb(163, 54, 240);
         @include flex(flex, space-around, center, row-reverse);
         flex-wrap: wrap;
         .public-places-images {
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            margin-left: 200px;
-    
+            gap: 10px;
             img {
-                width: 100%;
+                padding-top: 20px;
+                width: 400px;
                 max-width: 400px;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                border-radius: 10%;
+                box-shadow: rgba(0, 0, 0, .5);
             }
         }
         div{
             flex: 1;
             width: 50%;
-            padding: 20px;
-            text-align: right;
+            padding: 10px;
+            padding-left: 150px;
             font-size: 20px;
             text-align: center;
             h2{
                 padding: 10px;
+                text-align: left;
             }
             p{
+                text-align: left;
                 margin-bottom: 20px;
             }
             button{
                 a{
                     text-decoration: none;
                     color: rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+    .plagas {
+        @include flex(flex, space-around, center, row-reverse);
+        align-items: center;
+        padding: 2rem;
+    
+        &__texto {
+            h2 {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+            
+            ul {
+                list-style-type: none;
+                padding: 0;
+    
+                li {
+                    font-size: 1.1rem;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    
+        &__imagen {
+            img {
+                width: 400px;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+    .fumigacion {
+        @include flex(flex, space-around, center, row-reverse);
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+    
+        &__imagen {
+            img {
+                width: 400px;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        }
+    
+        &__texto {
+            h2 {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+    
+            ul {
+                list-style-type: disc;
+                padding-left: 1.5rem;
+    
+                li {
+                    font-size: 1.1rem;
+                    margin-bottom: 0.5rem;
+                    line-height: 1.5;
                 }
             }
         }
